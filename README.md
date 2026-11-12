@@ -65,5 +65,13 @@ src/
 - The server uses NodeNext resolution, so relative imports are written with a `.js`
   extension. `tsx` resolves them to the TypeScript sources in development.
 - `@` maps to `src/web`.
+- Web imports never include a source file extension, e.g. `import App from '@/app'`
+  and `() => import('@/pages/index')`; assets such as CSS keep theirs. The
+  `import/extensions` rule enforces this for `src/web`. `tsconfig.web.json` maps
+  `@/*` to both `./src/web/*` and `./src/web/*.vue`, and Vite lists `.vue` in
+  `resolve.extensions`, so components resolve without the suffix.
+- Oxlint runs with `typeAware` but without `typeCheck`: `oxlint-tsgolint` cannot
+  resolve `.vue` modules, so TypeScript diagnostics come from `pnpm typecheck`
+  (`tsc` and `vue-tsc`) instead.
 - Linting and formatting are handled by oxlint and oxfmt; the pre-commit hook runs
   lint-staged.

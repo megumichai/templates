@@ -1,16 +1,37 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["typescript", "unicorn"],
+  "plugins": ["typescript", "unicorn", "import"],
   "categories": {
     "correctness": "error"
   },
   "options": {
     "typeAware": true,
-    "typeCheck": true
+    "typeCheck": false
   },
   "rules": {
     "typescript/no-useless-default-assignment": "off"
   },
+  "overrides": [
+    {
+      "files": ["src/web/**/*.ts", "src/web/**/*.vue"],
+      "rules": {
+        "import/extensions": [
+          "error",
+          {
+            "ts": "never",
+            "tsx": "never",
+            "js": "never",
+            "jsx": "never",
+            "mjs": "never",
+            "cjs": "never",
+            "mts": "never",
+            "cts": "never",
+            "vue": "never"
+          }
+        ]
+      }
+    }
+  ],
   "env": {
     "builtin": true
   }

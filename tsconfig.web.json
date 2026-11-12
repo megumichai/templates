@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/web/*"]
+      "@/*": ["./src/web/*", "./src/web/*.vue"]
     }
   },
   "include": ["src/web/**/*.ts", "src/web/**/*.vue", "src/web/**/*.d.ts", "vite.config.ts"],
