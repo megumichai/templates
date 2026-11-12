@@ -32,17 +32,17 @@ routes, so `pnpm start` serves the whole app from port 3000.
 
 ## Scripts
 
-| Script              | Description                                     |
-| ------------------- | ----------------------------------------------- |
-| `dev`               | Run the API server and Vite dev server together |
-| `dev:server`        | Run the API with `tsx watch`                    |
-| `dev:web`           | Run Vite                                        |
-| `build`             | Build server and web                            |
-| `start`             | Run the compiled server                         |
-| `typecheck`         | Type-check both sides                           |
-| `lint` / `lint:fix` | Run oxlint                                      |
-| `fmt` / `fmt:check` | Run oxfmt                                       |
-| `check`             | lint + format check + typecheck                 |
+| Script                    | Description                                     |
+| ------------------------- | ----------------------------------------------- |
+| `dev`                     | Run the API server and Vite dev server together |
+| `dev:server`              | Run the API with `tsx watch`                    |
+| `dev:web`                 | Run Vite                                        |
+| `build`                   | Build server and web                            |
+| `start`                   | Run the compiled server                         |
+| `typecheck`               | Type-check both sides                           |
+| `lint` / `lint:fix`       | Run oxlint                                      |
+| `format` / `format:check` | Run oxfmt                                       |
+| `check`                   | lint + format check + typecheck                 |
 
 ## Layout
 

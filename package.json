@@ -15,11 +15,11 @@
     "typecheck": "pnpm typecheck:server && pnpm typecheck:web",
     "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
     "typecheck:web": "vue-tsc -p tsconfig.web.json --noEmit",
-    "check": "pnpm lint && pnpm fmt:check && pnpm typecheck",
+    "check": "pnpm lint && pnpm format:check && pnpm typecheck",
     "lint": "oxlint .",
     "lint:fix": "oxlint . --fix",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "prepare": "husky"
   },
   "dependencies": {
