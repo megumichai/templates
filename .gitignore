@@ -1,0 +1,10 @@
+logs/
+*.log
+node_modules/
+coverage/
+dist/
+.idea/
+.DS_Store
+*.sw?
+*.tsbuildinfo
+*.tsbuildinfo.*
