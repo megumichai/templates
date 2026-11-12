@@ -9,6 +9,7 @@ Each template lives on its own branch. `main` only holds this index, so cloning
 | Branch | Description |
 | --- | --- |
 | [`ts-lib`](../../tree/ts-lib) | TypeScript library: tsdown build (ESM + CJS), Vitest with type tests, oxlint/oxfmt, husky + lint-staged, Renovate, GitHub Actions for CI and npm releases |
+| [`vue-express`](../../tree/vue-express) | Vue 3 + Express full-stack app: Vite, Tailwind CSS, tsx dev server, shared TypeScript configs, oxlint/oxfmt, husky + lint-staged |
 
 ## Using a template
 
