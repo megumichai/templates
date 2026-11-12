@@ -38,7 +38,6 @@ export default [
     },
     rules: {
       'vue/attribute-hyphenation': ['error', 'always'],
-      'vue/component-definition-name-casing': ['error', 'kebab-case'],
       'vue/component-name-in-template-casing': [
         'error',
         'kebab-case',

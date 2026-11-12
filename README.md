@@ -77,8 +77,8 @@ src/
   resolve `.vue` modules, so TypeScript diagnostics come from `pnpm typecheck`
   (`tsc` and `vue-tsc`) instead.
 - Naming is kebab-case everywhere: `unicorn/filename-case` (ESLint) enforces
-  file names, `vue/component-definition-name-casing` (oxlint and ESLint)
-  enforces component names, and ESLint's `vue/component-name-in-template-casing`,
+  file names, `vue/component-definition-name-casing` (oxlint) enforces
+  component names, and ESLint's `vue/component-name-in-template-casing`,
   `vue/attribute-hyphenation` and `vue/v-on-event-hyphenation` enforce kebab-case
   tags, props and events in templates. Bracket route files such as
   `[...path].vue` are exempt from the file name rule.
