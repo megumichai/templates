@@ -76,11 +76,11 @@ src/
 - Oxlint runs with `typeAware` but without `typeCheck`: `oxlint-tsgolint` cannot
   resolve `.vue` modules, so TypeScript diagnostics come from `pnpm typecheck`
   (`tsc` and `vue-tsc`) instead.
-- Naming is kebab-case everywhere: `unicorn/filename-case` (ESLint) enforces
-  file names, `vue/component-definition-name-casing` (oxlint) enforces
-  component names, and ESLint's `vue/component-name-in-template-casing`,
-  `vue/attribute-hyphenation` and `vue/v-on-event-hyphenation` enforce kebab-case
-  tags, props and events in templates. Bracket route files such as
-  `[...path].vue` are exempt from the file name rule.
+- Naming is kebab-case everywhere: oxlint's `unicorn/filename-case` enforces
+  `.ts`/`.js` file names, ESLint's `unicorn/filename-case` enforces `.vue`
+  component file names (bracket routes such as `[...path].vue` are exempt), and
+  `vue/component-definition-name-casing` (oxlint) enforces component names.
+  ESLint's `vue/component-name-in-template-casing`, `vue/attribute-hyphenation`
+  and `vue/v-on-event-hyphenation` enforce kebab-case tags, props and events.
 - Linting runs through oxlint for general rules and ESLint for the Vue and file
   naming conventions; formatting is oxfmt. The pre-commit hook runs lint-staged.

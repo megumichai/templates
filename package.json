@@ -16,8 +16,8 @@
     "typecheck:server": "tsc -p tsconfig.server.json --noEmit",
     "typecheck:web": "vue-tsc -p tsconfig.web.json --noEmit",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck",
-    "lint": "oxlint . && eslint \"src/**/*.{ts,vue}\" \"*.{js,ts}\"",
-    "lint:fix": "oxlint . --fix && eslint \"src/**/*.{ts,vue}\" \"*.{js,ts}\" --fix",
+    "lint": "oxlint . && eslint \"src/**/*.vue\"",
+    "lint:fix": "oxlint . --fix && eslint \"src/**/*.vue\" --fix",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "prepare": "husky"

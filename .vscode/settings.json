@@ -28,5 +28,5 @@
     "/**/*.css": "tailwindcss"
   },
   "eslint.useFlatConfig": true,
-  "eslint.validate": ["javascript", "typescript", "vue"]
+  "eslint.validate": ["vue"]
 }

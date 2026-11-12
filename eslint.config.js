@@ -8,23 +8,9 @@ export default [
     ignores: ['dist/**', 'typed-router.d.ts'],
   },
   {
-    files: ['**/*.{js,ts,vue}'],
-    plugins: {
-      unicorn: pluginUnicorn,
-    },
-    rules: {
-      'unicorn/filename-case': ['error', { case: 'kebabCase', ignore: [/^\[.*\]\.vue$/] }],
-    },
-  },
-  {
-    files: ['**/*.ts'],
-    languageOptions: {
-      parser: tsParser,
-    },
-  },
-  {
     files: ['**/*.vue'],
     plugins: {
+      unicorn: pluginUnicorn,
       vue: pluginVue,
     },
     languageOptions: {
@@ -37,6 +23,7 @@ export default [
       },
     },
     rules: {
+      'unicorn/filename-case': ['error', { case: 'kebabCase', ignore: [/^\[.*\]\.vue$/] }],
       'vue/attribute-hyphenation': ['error', 'always'],
       'vue/component-name-in-template-casing': [
         'error',

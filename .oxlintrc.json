@@ -10,7 +10,13 @@
   },
   "rules": {
     "typescript/no-useless-default-assignment": "off",
-    "vue/component-definition-name-casing": ["error", "kebab-case"]
+    "vue/component-definition-name-casing": ["error", "kebab-case"],
+    "unicorn/filename-case": [
+      "error",
+      {
+        "case": "kebabCase"
+      }
+    ]
   },
   "overrides": [
     {
