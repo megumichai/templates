@@ -40,7 +40,7 @@ routes, so `pnpm start` serves the whole app from port 3000.
 | `build`                   | Build server and web                            |
 | `start`                   | Run the compiled server                         |
 | `typecheck`               | Type-check both sides                           |
-| `lint` / `lint:fix`       | Run oxlint                                      |
+| `lint` / `lint:fix`       | Run oxlint and ESLint                           |
 | `format` / `format:check` | Run oxfmt                                       |
 | `check`                   | lint + format check + typecheck                 |
 
@@ -76,5 +76,11 @@ src/
 - Oxlint runs with `typeAware` but without `typeCheck`: `oxlint-tsgolint` cannot
   resolve `.vue` modules, so TypeScript diagnostics come from `pnpm typecheck`
   (`tsc` and `vue-tsc`) instead.
-- Linting and formatting are handled by oxlint and oxfmt; the pre-commit hook runs
-  lint-staged.
+- Naming is kebab-case everywhere: `unicorn/filename-case` (ESLint) enforces
+  file names, `vue/component-definition-name-casing` (oxlint and ESLint)
+  enforces component names, and ESLint's `vue/component-name-in-template-casing`,
+  `vue/attribute-hyphenation` and `vue/v-on-event-hyphenation` enforce kebab-case
+  tags, props and events in templates. Bracket route files such as
+  `[...path].vue` are exempt from the file name rule.
+- Linting runs through oxlint for general rules and ESLint for the Vue and file
+  naming conventions; formatting is oxfmt. The pre-commit hook runs lint-staged.

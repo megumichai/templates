@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["typescript", "unicorn", "import"],
+  "plugins": ["typescript", "unicorn", "import", "vue"],
   "categories": {
     "correctness": "error"
   },
@@ -9,7 +9,8 @@
     "typeCheck": false
   },
   "rules": {
-    "typescript/no-useless-default-assignment": "off"
+    "typescript/no-useless-default-assignment": "off",
+    "vue/component-definition-name-casing": ["error", "kebab-case"]
   },
   "overrides": [
     {

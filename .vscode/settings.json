@@ -1,5 +1,5 @@
 {
-  "eslint.enable": false,
+  "eslint.enable": true,
   "prettier.enable": false,
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
@@ -26,5 +26,7 @@
   },
   "files.associations": {
     "/**/*.css": "tailwindcss"
-  }
+  },
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["javascript", "typescript", "vue"]
 }
