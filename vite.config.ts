@@ -3,9 +3,10 @@ import { fileURLToPath, URL } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
+import router from 'vue-router/vite'
 
 export default defineConfig({
-  plugins: [vue(), tailwindcss()],
+  plugins: [router({ routesFolder: 'src/web/pages' }), vue(), tailwindcss()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src/web', import.meta.url)),

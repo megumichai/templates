@@ -5,6 +5,12 @@
       "@/*": ["./src/web/*", "./src/web/*.vue"]
     }
   },
-  "include": ["src/web/**/*.ts", "src/web/**/*.vue", "src/web/**/*.d.ts", "vite.config.ts"],
+  "include": [
+    "src/web/**/*.ts",
+    "src/web/**/*.vue",
+    "src/web/**/*.d.ts",
+    "typed-router.d.ts",
+    "vite.config.ts"
+  ],
   "exclude": ["src/server"]
 }

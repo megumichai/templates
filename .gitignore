@@ -8,3 +8,4 @@ dist/
 *.sw?
 *.tsbuildinfo
 *.tsbuildinfo.*
+typed-router.d.ts

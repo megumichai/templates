@@ -1,13 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { routes, handleHotUpdate } from 'vue-router/auto-routes'
 
 export const router = createRouter({
   history: createWebHistory(),
-  routes: [
-    { path: '/', name: 'home', component: () => import('@/pages/index') },
-    {
-      path: '/:pathMatch(.*)*',
-      name: 'not-found',
-      component: () => import('@/pages/not-found'),
-    },
-  ],
+  routes,
 })
+
+if (import.meta.hot) {
+  handleHotUpdate(router)
+}
