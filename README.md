@@ -19,6 +19,12 @@ pnpm dev
 - API: http://localhost:3000
 - Vite proxies `/api` to the API server, so both share an origin in development.
 
+## Configuration
+
+Copy `.env.example` to `.env` and adjust the values. The server loads this file with
+`dotenv` on startup (`src/server/env.ts`); environment variables that are already set
+take precedence.
+
 ## Production
 
 ```sh
@@ -50,6 +56,7 @@ routes, so `pnpm start` serves the whole app from port 3000.
 src/
   server/
     app.ts            Express app, static serving, error handling
+    env.ts            Loads .env with dotenv
     index.ts          HTTP server entry
     routes/index.ts   API routes mounted at /api
   web/
